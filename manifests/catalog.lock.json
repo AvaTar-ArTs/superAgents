@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "generated_at": "2026-08-18T03:32:51Z",
+  "generated_by": "AvaTar-ArTs/superAgents",
+  "generated_manifest": {
+    "path": "manifests/skills.json",
+    "sha256": "75aaa2fcf64679dbb51f32710c8ff0c6182d387af343574fb5d8867b617daccc",
+    "skill_count": 8
+  },
+  "sources": [
+    {
+      "id": "source.superskills",
+      "repository": "AvaTar-ArTs/superSkills",
+      "path": "catalog/skills.json",
+      "commit": "db682a6141f8960a0c3825ee70fea6af2d503759",
+      "sha256": "77eccdd1ef5699edb874f8d1ebf511547b984ea4d2545fbea4216f93815a8472",
+      "bytes": 3056
+    }
+  ]
+}
