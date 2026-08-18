@@ -7,7 +7,7 @@
       "kind": "canonical-curated-catalog",
       "repository": "AvaTar-ArTs/superSkills",
       "catalog_path": "catalog/skills.json",
-      "ref": "main",
+      "commit": "db682a6141f8960a0c3825ee70fea6af2d503759",
       "sync_command": "python scripts/sync_agent_skills_catalog.py exported/superskills.json manifests/skills.json --source-label AvaTar-ArTs/superSkills"
     },
     {
