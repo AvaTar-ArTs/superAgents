@@ -4,7 +4,7 @@
   "title": "SuperAgents Skill",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "description", "tags", "capabilities", "source", "risk"],
+  "required": ["id", "name", "description", "tags", "capabilities", "source", "risk", "status"],
   "properties": {
     "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$"},
     "name": {"type": "string", "minLength": 1},
@@ -12,6 +12,7 @@
     "tags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "capabilities": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "source": {"type": "string", "minLength": 1},
-    "risk": {"enum": ["low", "medium", "high"]}
+    "risk": {"enum": ["low", "medium", "high"]},
+    "status": {"enum": ["new", "curated", "deprecated"]}
   }
 }
