@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "source.superskills",
+      "name": "SuperSkills",
+      "kind": "canonical-curated-catalog",
+      "repository": "AvaTar-ArTs/superSkills",
+      "catalog_path": "catalog/skills.json",
+      "ref": "main",
+      "sync_command": "python scripts/sync_agent_skills_catalog.py exported/superskills.json manifests/skills.json --source-label AvaTar-ArTs/superSkills"
+    },
+    {
+      "id": "source.agent-skills",
+      "name": "agent-skills",
+      "kind": "upstream-ecosystem",
+      "repository": "AvaTar-ArTs/agent-skills",
+      "catalog_path": null,
+      "ref": "main",
+      "sync_command": "python scripts/sync_agent_skills_catalog.py exported/agent-skills.json manifests/skills.json --source-label AvaTar-ArTs/agent-skills"
+    }
+  ]
+}
