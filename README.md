@@ -2,7 +2,7 @@
 
 > A focused orchestration and agent-runtime layer for the AvaTar-ArTs ecosystem.
 
-SuperAgents is the control plane for selecting, composing, validating, and executing specialized agents. It complements the broader [AvaTar-ArTs/agent-skills](https://github.com/AvaTar-ArTs/agent-skills) repository instead of duplicating its entire library.
+SuperAgents is the control plane for selecting, composing, validating, and executing specialized agents. It complements [SuperSkills](https://github.com/AvaTar-ArTs/superSkills), the curated reusable-skill catalog, and the broader [agent-skills](https://github.com/AvaTar-ArTs/agent-skills) ecosystem.
 
 ## What belongs here
 
@@ -10,8 +10,14 @@ SuperAgents is the control plane for selecting, composing, validating, and execu
 - routing and capability selection
 - execution envelopes and audit events
 - validation, verification, and release gates
-- adapters for the canonical agent-skills ecosystem
+- adapters for SuperSkills and agent-skills catalogs
 - compact core process workflows derived from Superpowers
+
+## What belongs in SuperSkills
+
+- curated reusable skill definitions
+- skill metadata, provenance, tags, capabilities, and risk
+- composition and lifecycle status
 
 ## What belongs in agent-skills
 
@@ -22,7 +28,7 @@ SuperAgents is the control plane for selecting, composing, validating, and execu
 
 ## Current status
 
-This repository contains the initial foundation: schemas, manifests, a deterministic router, catalog validation, architecture documentation, and a verification workflow.
+This repository contains the initial foundation plus execution policy primitives, an offline catalog synchronizer, and an explicit SuperSkills integration boundary.
 
 ## Quick start
 
@@ -31,13 +37,21 @@ python scripts/validate_catalog.py
 python -m unittest discover -s tests -v
 ```
 
+To import an exported SuperSkills catalog:
+
+```bash
+python scripts/sync_agent_skills_catalog.py \
+  exported/superskills.json manifests/skills.json \
+  --source-label AvaTar-ArTs/superSkills
+```
+
 ## Design principles
 
 1. Contracts before behavior.
 2. Explicit routing before execution.
 3. Verification before completion claims.
 4. Human approval for consequential writes.
-5. The canonical `agent-skills` repository remains the source for reusable domain capability.
+5. SuperSkills is the preferred curated catalog; agent-skills remains the broad upstream source.
 6. Every execution should be inspectable after the fact.
 
-See [ARCHITECTURE.md](ARCHITECTURE.md) and the [design specification](docs/superpowers/specs/2026-08-18-superagents-foundation-design.md).
+See [ARCHITECTURE.md](ARCHITECTURE.md), [ecosystem-boundary.md](docs/ecosystem-boundary.md), and the [design specification](docs/superpowers/specs/2026-08-18-superagents-foundation-design.md).
