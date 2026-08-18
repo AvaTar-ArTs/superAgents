@@ -1,0 +1,12 @@
+[build-system]
+requires = []
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "superagents"
+version = "0.1.0"
+description = "A focused orchestration and agent-runtime layer for AvaTar-ArTs"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

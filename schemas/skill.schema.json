@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AvaTar-ArTs/superAgents/blob/main/schemas/skill.schema.json",
+  "title": "SuperAgents Skill",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "description", "tags", "capabilities", "source", "risk"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$"},
+    "name": {"type": "string", "minLength": 1},
+    "description": {"type": "string", "minLength": 1},
+    "tags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "capabilities": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "source": {"type": "string", "minLength": 1},
+    "risk": {"enum": ["low", "medium", "high"]}
+  }
+}

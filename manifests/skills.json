@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "process.brainstorming",
+      "name": "Brainstorming",
+      "description": "Clarify intent, constraints, approaches, and design before implementation.",
+      "tags": ["planning", "design", "requirements"],
+      "capabilities": ["brainstorming", "design", "requirements-analysis"],
+      "source": "AvaTar-ArTs/agent-skills:skills/brainstorming",
+      "risk": "low"
+    },
+    {
+      "id": "process.test-driven-development",
+      "name": "Test-Driven Development",
+      "description": "Drive implementation with failing tests, minimal changes, and regression coverage.",
+      "tags": ["testing", "engineering", "implementation"],
+      "capabilities": ["tdd", "testing", "regression-testing"],
+      "source": "AvaTar-ArTs/agent-skills:skills/software-development/test-driven-development",
+      "risk": "low"
+    },
+    {
+      "id": "process.verification",
+      "name": "Verification Before Completion",
+      "description": "Require fresh evidence before claiming a result is complete or passing.",
+      "tags": ["verification", "quality", "release"],
+      "capabilities": ["verification", "evidence-based-completion", "quality-gates"],
+      "source": "AvaTar-ArTs/agent-skills:skills/verification-before-completion",
+      "risk": "low"
+    },
+    {
+      "id": "creative.asset-pipeline",
+      "name": "Structured Asset Pipeline",
+      "description": "Create, validate, and package multimodal creative assets through explicit contracts.",
+      "tags": ["creative", "assets", "images", "video", "audio"],
+      "capabilities": ["asset-pipeline", "creative-production", "multimodal"],
+      "source": "AvaTar-ArTs/agent-skills:skills/creative/structured-asset-pipeline",
+      "risk": "medium"
+    },
+    {
+      "id": "research.source-backed",
+      "name": "Source-Backed Research",
+      "description": "Organize research tasks, evidence, citations, and confidence boundaries.",
+      "tags": ["research", "sources", "citations"],
+      "capabilities": ["research", "citation", "evidence-synthesis"],
+      "source": "AvaTar-ArTs/agent-skills:skills/research",
+      "risk": "low"
+    },
+    {
+      "id": "integration.mcp-development",
+      "name": "MCP Development",
+      "description": "Design and implement MCP applications, servers, tools, and integration contracts.",
+      "tags": ["mcp", "integrations", "tools"],
+      "capabilities": ["mcp-development", "tool-integration", "api-design"],
+      "source": "AvaTar-ArTs/agent-skills:skills/mcp-integration",
+      "risk": "high"
+    }
+  ]
+}

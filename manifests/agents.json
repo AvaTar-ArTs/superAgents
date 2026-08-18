@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "agents": [
+    {
+      "id": "superagents.orchestrator",
+      "name": "SuperAgents Orchestrator",
+      "description": "Normalize requests, select capabilities, apply approval boundaries, and return an execution plan.",
+      "tags": ["orchestration", "routing", "planning", "agents"],
+      "capabilities": ["intent-routing", "capability-selection", "execution-planning"],
+      "skills": ["process.brainstorming", "process.verification"],
+      "source": "superAgents",
+      "approval": "approval_required"
+    },
+    {
+      "id": "superagents.verifier",
+      "name": "SuperAgents Verifier",
+      "description": "Inspect artifacts, run validation, and report evidence without overstating completion.",
+      "tags": ["verification", "testing", "quality", "release"],
+      "capabilities": ["verification", "catalog-validation", "test-analysis"],
+      "skills": ["process.test-driven-development", "process.verification"],
+      "source": "superAgents",
+      "approval": "advisory"
+    },
+    {
+      "id": "avatararts.creative-director",
+      "name": "AvatarArts Creative Director",
+      "description": "Route creative requests into structured asset, narrative, visual, and production workflows.",
+      "tags": ["creative", "story", "manga", "image", "video", "brand"],
+      "capabilities": ["creative-direction", "narrative-design", "asset-pipeline"],
+      "skills": ["creative.asset-pipeline", "process.brainstorming"],
+      "source": "AvaTar-ArTs/agent-skills:agents/visual-storyteller",
+      "approval": "approval_required"
+    }
+  ]
+}
