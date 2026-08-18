@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1 — 2026-08-18
+
+- Fixed the offline agent-skills synchronizer for list-shaped exports.
+- Added regression tests for wrapped and list-shaped catalog inputs.
+
 ## 0.2.0 — 2026-08-18
 
 - Added execution-envelope, audit-event, and approval-policy schemas.

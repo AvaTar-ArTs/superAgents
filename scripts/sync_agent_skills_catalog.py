@@ -13,7 +13,12 @@ from pathlib import Path
 
 def sync(source_path: Path, output_path: Path, source_label: str) -> int:
     source = json.loads(source_path.read_text())
-    entries = source.get("skills", source if isinstance(source, list) else [])
+    if isinstance(source, dict):
+        entries = source.get("skills", [])
+    elif isinstance(source, list):
+        entries = source
+    else:
+        entries = []
     skills = []
     for entry in entries:
         skill_id = entry.get("id") or entry.get("name", "").lower().replace(" ", "-")
