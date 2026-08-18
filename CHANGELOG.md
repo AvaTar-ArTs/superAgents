@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 — 2026-08-18
+
+- Created and integrated the empty SuperSkills repository as the curated reusable-skill catalog.
+- Added an explicit source manifest for SuperSkills and agent-skills.
+- Added the SuperSkills ecosystem boundary and integration plan.
+- Updated synchronization guidance to preserve catalog provenance.
+- Added cross-repository changelog coverage.
+
 ## 0.2.1 — 2026-08-18
 
 - Fixed the offline agent-skills synchronizer for list-shaped exports.
