@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AvaTar-ArTs/superAgents/blob/main/schemas/approval-policy.schema.json",
+  "title": "SuperAgents Approval Policy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "risk", "requires_confirmation", "allowed_actions", "denied_actions"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$"},
+    "risk": {"enum": ["low", "medium", "high"]},
+    "requires_confirmation": {"type": "boolean"},
+    "allowed_actions": {"type": "array", "items": {"type": "string"}},
+    "denied_actions": {"type": "array", "items": {"type": "string"}}
+  }
+}

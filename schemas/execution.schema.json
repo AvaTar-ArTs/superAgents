@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AvaTar-ArTs/superAgents/blob/main/schemas/execution.schema.json",
+  "title": "SuperAgents Execution Envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["execution_id", "request", "status", "selected_agent", "selected_skills", "approval", "verification"],
+  "properties": {
+    "execution_id": {"type": "string", "minLength": 1},
+    "request": {"type": "object", "required": ["intent"], "properties": {"intent": {"type": "string", "minLength": 1}, "required_capabilities": {"type": "array", "items": {"type": "string"}}}, "additionalProperties": false},
+    "status": {"enum": ["planned", "awaiting_approval", "running", "completed", "failed"]},
+    "selected_agent": {"type": "string", "minLength": 1},
+    "selected_skills": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "approval": {"enum": ["not_required", "pending", "granted", "denied"]},
+    "verification": {"enum": ["not_started", "pending", "passed", "failed"]},
+    "outputs": {"type": "array", "items": {"type": "object"}},
+    "events": {"type": "array", "items": {"type": "string"}},
+    "metadata": {"type": "object"}
+  }
+}

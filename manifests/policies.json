@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "policies": [
+    {
+      "id": "policy.low",
+      "risk": "low",
+      "requires_confirmation": false,
+      "allowed_actions": ["read", "analyze", "route", "validate", "draft"],
+      "denied_actions": ["publish", "delete", "send", "charge"]
+    },
+    {
+      "id": "policy.medium",
+      "risk": "medium",
+      "requires_confirmation": true,
+      "allowed_actions": ["read", "analyze", "route", "validate", "draft", "create"],
+      "denied_actions": ["delete", "charge"]
+    },
+    {
+      "id": "policy.high",
+      "risk": "high",
+      "requires_confirmation": true,
+      "allowed_actions": ["read", "analyze", "route", "validate", "draft"],
+      "denied_actions": ["publish", "delete", "send", "charge", "modify_permissions"]
+    }
+  ]
+}

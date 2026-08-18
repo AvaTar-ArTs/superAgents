@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AvaTar-ArTs/superAgents/blob/main/schemas/audit-event.schema.json",
+  "title": "SuperAgents Audit Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "execution_id", "event_type", "timestamp", "actor"],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 1},
+    "execution_id": {"type": "string", "minLength": 1},
+    "event_type": {"enum": ["route_selected", "approval_requested", "approval_granted", "approval_denied", "execution_started", "artifact_emitted", "verification_completed", "execution_failed"]},
+    "timestamp": {"type": "string", "minLength": 1},
+    "actor": {"type": "string", "minLength": 1},
+    "payload": {"type": "object"}
+  }
+}
