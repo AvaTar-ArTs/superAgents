@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.0 — 2026-08-18
+
+- Pinned SuperSkills to commit db682a6141f8960a0c3825ee70fea6af2d503759.
+- Added manifests/catalog.lock.json with source export hash, generated timestamp, and manifest hash.
+- Added imported-entry validation against the pinned SuperSkills schema in CI.
+- Added lockfile verification and automated changelog validation.
+- Added matching changelog validation to SuperSkills CI.
+
 ## 0.3.2 — 2026-08-18
 
 - Clarified that SuperAgents owns agents and agent runtime behavior.
