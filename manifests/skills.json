@@ -144,7 +144,8 @@
         "verification-records"
       ],
       "source": "superSkills",
-      "risk": "low"
+      "risk": "low",
+      "status": "new"
     }
   ]
 }
