@@ -4,7 +4,7 @@
   "generated_by": "AvaTar-ArTs/superAgents",
   "generated_manifest": {
     "path": "manifests/skills.json",
-    "sha256": "75aaa2fcf64679dbb51f32710c8ff0c6182d387af343574fb5d8867b617daccc",
+    "sha256": "5270b6c3923f4ab56e78b40eb7fe7f6e5937781a2060811e38c2dbedfccb12d2",
     "skill_count": 8
   },
   "sources": [
