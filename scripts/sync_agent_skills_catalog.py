@@ -31,7 +31,8 @@ def sync(source_path: Path, output_path: Path, source_label: str) -> int:
             "tags": sorted(set(entry.get("tags", []))),
             "capabilities": sorted(set(entry.get("capabilities", entry.get("tags", [])))),
             "source": entry.get("source", f"{source_label}:{skill_id}"),
-            "risk": entry.get("risk", "low")
+            "risk": entry.get("risk", "low"),
+            "status": entry.get("status", "new")
         })
     output_path.write_text(json.dumps({"version": 1, "skills": skills}, indent=2) + "\n")
     print(f"wrote {len(skills)} skills to {output_path}")
