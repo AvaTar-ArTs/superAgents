@@ -16,7 +16,8 @@
         "requirements-analysis"
       ],
       "source": "AvaTar-ArTs/agent-skills:skills/brainstorming",
-      "risk": "low"
+      "risk": "low",
+      "status": "curated"
     },
     {
       "id": "process.test-driven-development",
@@ -33,7 +34,8 @@
         "regression-testing"
       ],
       "source": "AvaTar-ArTs/agent-skills:skills/software-development/test-driven-development",
-      "risk": "low"
+      "risk": "low",
+      "status": "curated"
     },
     {
       "id": "process.verification",
@@ -50,7 +52,8 @@
         "quality-gates"
       ],
       "source": "AvaTar-ArTs/agent-skills:skills/verification-before-completion",
-      "risk": "low"
+      "risk": "low",
+      "status": "curated"
     },
     {
       "id": "creative.asset-pipeline",
@@ -69,7 +72,8 @@
         "multimodal"
       ],
       "source": "AvaTar-ArTs/agent-skills:skills/creative/structured-asset-pipeline",
-      "risk": "medium"
+      "risk": "medium",
+      "status": "curated"
     },
     {
       "id": "research.source-backed",
@@ -86,7 +90,8 @@
         "evidence-synthesis"
       ],
       "source": "AvaTar-ArTs/agent-skills:skills/research",
-      "risk": "low"
+      "risk": "low",
+      "status": "curated"
     },
     {
       "id": "integration.mcp-development",
@@ -103,7 +108,8 @@
         "api-design"
       ],
       "source": "AvaTar-ArTs/agent-skills:skills/mcp-integration",
-      "risk": "high"
+      "risk": "high",
+      "status": "curated"
     },
     {
       "id": "integration.catalog-synchronization",
@@ -120,7 +126,8 @@
         "provenance"
       ],
       "source": "superSkills",
-      "risk": "medium"
+      "risk": "medium",
+      "status": "new"
     },
     {
       "id": "release.changelog-discipline",
