@@ -12,6 +12,12 @@ SuperAgents defines specialized agents and the control plane that selects, compo
 
 The manifests/skills.json file here is a generated runtime projection used by agents; it is not the authoritative skill library.
 
+## Reproducible skill imports
+
+- SuperSkills is pinned in manifests/sources.json.
+- manifests/catalog.lock.json records the source commit, export SHA-256, generation timestamp, and generated manifest hash.
+- CI validates imported entries against the pinned SuperSkills schema and verifies the lockfile.
+
 ## What belongs here
 
 - deterministic agent contracts
@@ -21,14 +27,12 @@ The manifests/skills.json file here is a generated runtime projection used by ag
 - adapters for SuperSkills and agent-skills catalogs
 - compact core process workflows derived from Superpowers
 
-## Current status
-
-This repository contains the initial agent foundation plus execution policy primitives, an offline skill-catalog synchronizer, and an explicit SuperSkills integration boundary.
-
 ## Quick start
 
 ```bash
 python scripts/validate_catalog.py
+python scripts/verify_catalog_lock.py
+python scripts/check_changelog.py
 python -m unittest discover -s tests -v
 ```
 
