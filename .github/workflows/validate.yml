@@ -17,5 +17,15 @@ jobs:
           python-version: "3.11"
       - name: Validate catalogs
         run: python scripts/validate_catalog.py
+      - name: Validate imported skills against pinned SuperSkills schema
+        run: |
+          curl --fail --location \
+            https://raw.githubusercontent.com/AvaTar-ArTs/superSkills/db682a6141f8960a0c3825ee70fea6af2d503759/schemas/skill.schema.json \
+            --output /tmp/superskills-skill.schema.json
+          python scripts/validate_import.py manifests/skills.json /tmp/superskills-skill.schema.json
+      - name: Verify catalog lock
+        run: python scripts/verify_catalog_lock.py
+      - name: Validate changelog
+        run: python scripts/check_changelog.py
       - name: Run tests
         run: python -m unittest discover -s tests -v
