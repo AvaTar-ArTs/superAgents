@@ -1,8 +1,14 @@
 # Changelog
 
+## 0.3.2 — 2026-08-18
+
+- Clarified that SuperAgents owns agents and agent runtime behavior.
+- Clarified that SuperSkills owns reusable skill definitions.
+- Documented manifests/skills.json as a generated runtime projection, not the authoritative skill library.
+
 ## 0.3.1 — 2026-08-18
 
-- Refreshed `manifests/skills.json` from the SuperSkills catalog.
+- Refreshed manifests/skills.json from the SuperSkills catalog.
 - Expanded the runtime catalog from 6 to 8 validated skill contracts.
 - Preserved source provenance and risk classifications during import.
 
