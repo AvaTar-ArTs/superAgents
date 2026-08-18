@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1 — 2026-08-18
+
+- Refreshed `manifests/skills.json` from the SuperSkills catalog.
+- Expanded the runtime catalog from 6 to 8 validated skill contracts.
+- Preserved source provenance and risk classifications during import.
+
 ## 0.3.0 — 2026-08-18
 
 - Created and integrated the empty SuperSkills repository as the curated reusable-skill catalog.
